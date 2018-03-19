@@ -85,7 +85,7 @@
                     Senin-Jumat pukul 09.00-16.00 WIB selama periode pendaftaran pada tanggal 19 Maret s.d 22 Maret 2018.
                     (Panitia tidak melayani Whatsapp & SMS).
                     <br>
-                    <i>(Untuk detail kontak silakan menuju bagian<a href="{{url('contact-person')}}">kontak person</a>)</i>
+                    <i>(Untuk detail kontak silakan menuju bagian <a href="{{url('contact-person')}}">kontak person</a>)</i>
                 </li>
                 <li>Berkas lamaran yang diterima panitia menjadi milik panitia dan tidak dapat diminta kembali oleh pelamar.</li>
             </ol>
