@@ -32,6 +32,10 @@ class LayoutController extends BaseController
         return view('layouts/daftar');
     }
 
+	public function indexUbahPassword(Request $request){
+        return view('layouts/ubah-password');
+    }
+
 	public function indexUploadBerkas(Request $request){
         $pelamar = Auth::user();
         $data = array(

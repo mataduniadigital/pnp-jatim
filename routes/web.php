@@ -24,4 +24,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('signout', ['uses' => 'FunctionController@actionPelamarLogout']);
     Route::post('upload-berkas', ['uses' => 'FunctionController@actionPelamarUploadBerkas']);
     Route::post('finish-upload', ['uses' => 'FunctionController@actionPelamarFinishUpload']);
+    Route::get('ubah-password', ['uses' => 'LayoutController@indexUbahPassword']);
+    Route::post('ubah-password', ['uses' => 'FunctionController@actionUbahPassword']);
 });

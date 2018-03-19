@@ -69,6 +69,26 @@ class FunctionController extends BaseController
         return Redirect::back();
     }
 
+    public function actionUbahPassword(Request $request){
+        $input = (object) $request->input();
+        $pelamar = Auth::user();
+        if($input->new_password == $input->new_repassword){
+            if(Auth::once(['nik' => $pelamar->nik, 'password' => $input->old_password])) {
+                $pelamar->password      = Hash::make($input->new_password);
+                $pelamar->save();
+
+                Session::flash('success-msg', 'Password Anda berhasil diubah ...');
+                return Redirect::to('/');
+            }else{
+                Session::flash('error-msg', 'Password lama Anda salah ...');
+                return Redirect::back();
+            }
+        }else{
+            Session::flash('error-msg', 'Ketik kembali kolom re-password sama dengan kolom password baru Anda.');
+            return Redirect::back();
+        }
+    }
+
     public function actionPelamarFinishUpload(Request $request){
         $input = (object) $request->input();
 

@@ -26,31 +26,6 @@
                     Contact Person
                 </a>
             </div>
-
-            @if(Auth::check())
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="field is-grouped is-grouped-multiline">
-                        <p class="control">
-                            <a class="button is-primary" href="{{url('upload-berkas')}}">
-                                <span class="icon">
-                                    <i class="fa fa-upload"></i>
-                                </span>
-                                <span>Upload Berkas</span>
-                            </a>
-                        </p>
-                        <p class="control">
-                            <a class="button is-warning" href="{{url('signout')}}">
-                                <span class="icon">
-                                    <i class="fa fa-sign-out"></i>
-                                </span>
-                                <span>Log out</span>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            @endif
         </div>
     </div>
 </nav>
@@ -82,4 +57,36 @@
             </article>
         </div>
     </div>
+    @if(Auth::check())
+    <div class="hero-foot">
+        <div class="container">
+            <div class="field is-grouped is-grouped-multiline is-grouped-right">
+                <p class="control">
+                    <a class="button is-primary" href="{{url('upload-berkas')}}">
+                        <span class="icon">
+                            <i class="fa fa-upload"></i>
+                        </span>
+                        <span>Upload Berkas</span>
+                    </a>
+                </p>
+                <p class="control">
+                    <a class="button is-black" href="{{url('ubah-password')}}">
+                        <span class="icon">
+                            <i class="fa fa-key"></i>
+                        </span>
+                        <span>Ubah Password</span>
+                    </a>
+                </p>
+                <p class="control">
+                    <a class="button is-warning" href="{{url('signout')}}">
+                        <span class="icon">
+                            <i class="fa fa-sign-out"></i>
+                        </span>
+                        <span>Log out</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    @endif
 </section>
