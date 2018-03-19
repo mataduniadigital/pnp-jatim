@@ -11,7 +11,7 @@
             <div class="column is-8">
                 @if($berkas_lamaran->status == 0)
                 <div class="content">
-                    <h2>Silakan upload berkas-berkas Anda</h2>
+                    <h2>Silakan upload berkas-berkas Anda, berkas dapat berupa <b>file gambar maupun pdf</b></h2>
                 </div>
                 <div class="field">
                     <label class="label">NIK</label>
@@ -694,8 +694,47 @@
                     <input class="input" type="hidden" name="jenis_file">
                 </form>
                 <hr>
-                <form action="{{action('FunctionController@actionPelamarFinishUpload')}}" method="POST">
+                <form action="{{action('FunctionController@actionPelamarFinishUpload')}}" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
+                    <div class="content has-text-centered">
+                        <h2>Isikan tambahan informasi yang kami perlukan, kemudian klik "Submit All"</h2>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <label class="label">Satukan semua file di atas dalam bentuk pdf kemudian upload sebagai pertimbangan kami</label>
+                        </div>
+                        <div class="control">
+                            <small>
+                                <i style="color: #ff3860">(Wajib diupload)</i>
+                            </small>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <div class="file has-name is-fullwidth">
+                                <label class="file-label">
+                                    <input class="file-input" type="file" name="file_summary" required>
+                                    <span class="file-cta">
+                                        <span class="file-icon">
+                                            <i class="fa fa-upload"></i>
+                                        </span>
+                                        <span class="file-label">
+                                            Choose a file…
+                                        </span>
+                                    </span>
+                                    <span class="file-name" for="file_summary">
+                                        ...
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Jika Anda belum mengisi email, silakan isi email di sini agar kami dapat menghubungi Anda</label>
+                        <div class="control">
+                            <input class="input" type="text" name="email" value="{{$pelamar->email}}" placeholder="email Anda" required>
+                        </div>
+                    </div>
                     <div class="field">
                         <label class="label">Mohon pilih 1 lokasi yang Anda kehendaki untuk penempatan</label>
                         <div class="control">

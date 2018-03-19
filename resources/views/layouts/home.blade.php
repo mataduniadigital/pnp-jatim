@@ -60,6 +60,46 @@
 <section class="section">
     <div class="container">
         <div class="content">
+            <h2><b>Pengumuman Upload Berkas Tambahan</b></h2>
+            <p>Untuk seluruh pelamar dimohon untuk melakukan penggabungan dari semua file berkas persyaratan dalam satu file berekstensi pdf dan melakukan upload berkas tersebut setelah memilih pilihan lokasi penempatan saat masuk ke menu upload berkas.</p>
+            <p>Berikut nama-nama pelamar yang harus menambahkan persyaratan upload berkas tambahan:</p>
+            <ol>
+                <li>nik: 3573034206790002 a.n. R. YUNITA AMALA</li>
+                <li>nik: 3573022210810005 a.n. Aminuddin Efendy</li>
+                <li>nik: 3309066207959002 a.n. rohmantika wulandari</li>
+                <li>nik: 3509221811800001 a.n. DEDY SAPUTRO</li>
+                <li>nik: 3578041605950010 a.n. MEIDY KUNCORO ADI</li>
+                <li>nik: 3518141308800002 a.n. JUNADI</li>
+                <li>nik: 3509205204950004 a.n. aprilia kusuma wardani</li>
+                <li>nik: 3506252603760002 a.n. alfian soffa</li>
+                <li>nik: 3524041111720002 a.n. Widodo Sutresno</li>
+                <li>nik: 3509201005650002 a.n. Nur Anis Faisal</li>
+            </ol>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2><b>Petunjuk Alur Pendaftaran Peserta</b></h2>
+            <ol>
+                <li>Klik Menu Pendaftaran</li>
+                <li>Masukkan NIK, Nama Lengkap (sesuai identitas), dan Password yg diinginkan untuk login akun</li>
+                <li>Kembali ke Menu Home, lalu login sesuai dengan NIK dan password yang telah didaftarkan</li>
+                <li>Klik tombol "Upload Berkas" untuk melakukan upload berkas sesuai yg dibutuhkan</li>
+                <li>Upload satu per satu berkas sesuai yang ada pada tampilan website</li>
+                <li>Pilih lokasi (kabupaten/kota) yang dikendaki untuk lokasi penempatan </li>
+                <li>Lakukan persetujuan dengan klik centang pada 2 poin terakhir</li>
+                <li>Klik tombol "Submit All"</li>
+                <li>Setelah Anda dipastikan lolos seleksi berkas oleh Tim Verifikator, lakukan login kembali dan cetak Kartu Tanda Pendaftaran </li>
+                <li>Kartu Tanda Pendaftaran digunakan sebagai tanda ketika melakukan Tes Tulis dan Wawancara</li>
+            </ol>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="content">
             <h2>
                 <b>Pengumuman</b>
             </h2>

@@ -14,25 +14,31 @@
                     <div class="field">
                         <label class="label">NIK</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Nomor NIK" name="nik" value="{{Request::old('nik')}}">
+                            <input class="input" type="text" placeholder="Nomor NIK" name="nik" value="{{Request::old('nik')}}" required>
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Nama Lengkap</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="nama" name="nama_lengkap" value="{{Request::old('nama_lengkap')}}">
+                            <input class="input" type="text" placeholder="nama lengkap" name="nama_lengkap" value="{{Request::old('nama_lengkap')}}" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="email" name="email" value="{{Request::old('email')}}" required>
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Password</label>
                         <div class="control">
-                            <input class="input" type="password" placeholder="password" name="password">
+                            <input class="input" type="password" placeholder="password" name="password" required>
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Re-type Password</label>
                         <div class="control">
-                            <input class="input" type="password" placeholder="re-type password" name="repassword">
+                            <input class="input" type="password" placeholder="re-type password" name="repassword" required>
                         </div>
                     </div>
                     <div class="field is-grouped">

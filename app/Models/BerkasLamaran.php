@@ -36,7 +36,8 @@ class BerkasLamaran extends Model
         'file_keterangan_pengalaman',
         'file_sertifikat',
         'file_bukan_pns',
-        'file_bpjs'
+        'file_bpjs',
+        'file_summary'
     ];
 
     protected $guarded = [];

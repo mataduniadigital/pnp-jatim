@@ -37,6 +37,7 @@ class FunctionController extends BaseController
             $pelamar = new Pelamar;
             $pelamar->nama_lengkap  = $input->nama_lengkap;
             $pelamar->nik           = $nik;
+            $pelamar->email         = $input->email;
             $pelamar->password      = Hash::make($input->password);
             $pelamar->save();
 
@@ -97,8 +98,19 @@ class FunctionController extends BaseController
             if($berkas_lamaran->status != 0){
                 return 404;
             }
+
+            $path = null;
+            if ($request->hasFile('file_summary')) {
+                $filename = 'p'.$pelamar->id_pelamar.'-'.uniqid().'.'.$request->file('file_summary')->getClientOriginalExtension();
+                $path = $request->file('file_summary')->storeAs('public/file_summary', $filename);
+                $path = str_replace('public', 'storage', $path);
+            }
+            $pelamar->email                 = $input->email;
+            $pelamar->save();
+            
             $berkas_lamaran->id_penempatan  = $input->penempatan;
             $berkas_lamaran->status         = 1;
+            $berkas_lamaran->file_summary   = $path;
             $berkas_lamaran->save();
         }
 
