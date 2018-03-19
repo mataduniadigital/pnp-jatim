@@ -695,6 +695,7 @@
                 </form>
                 <hr>
                 <form action="{{action('FunctionController@actionPelamarFinishUpload')}}" method="POST">
+                    {{csrf_field()}}
                     <div class="field">
                         <label class="label">Mohon pilih 1 lokasi yang Anda kehendaki untuk penempatan</label>
                         <div class="control">

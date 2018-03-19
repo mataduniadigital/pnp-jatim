@@ -24,7 +24,7 @@
                 <li>Scan Ijazah terakhir (legalisir diserahkan pada saat dinyatakan Lolos Seleksi Administrasi).</li>
                 <li>Scan Transkrip (legalisir diserahkan pada saat dinyatakan Lolos Seleksi Administrasi).
                 </li>
-                <li>Fotocopy SKCK yang masih berlaku (legalisir diserahkan pada saat dinyatakan Lolos Seleksi Administrasi).</li>
+                <li>Scan SKCK yang masih berlaku (legalisir diserahkan pada saat dinyatakan Lolos Seleksi Administrasi).</li>
                 <li>Scan Surat Bebas Narkoba, Psikotropika, dan Zat Aditif lainnya (asli diserahkan pada saat dinyatakan Lolos
                     Seleksi Administrasi).</li>
                 <li>Scan Surat Keterangan Pengalaman Kerja sejenis (jika ada).</li>
