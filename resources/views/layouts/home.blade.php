@@ -66,9 +66,7 @@
             <ol>
                 <li>NIK: 3573034xxxxxxxxxx a.n. {{ucwords(strtolower('R. YUNITA AMALA'))}}</li>
                 <li>NIK: 3573022xxxxxxxxxx a.n. {{ucwords(strtolower('Aminuddin Efendy'))}}</li>
-                <li>NIK: 3309066xxxxxxxxxx a.n. {{ucwords(strtolower('rohmantika wulandari'))}}</li>
                 <li>NIK: 3509221xxxxxxxxxx a.n. {{ucwords(strtolower('DEDY SAPUTRO'))}}</li>
-                <li>NIK: 3578041xxxxxxxxxx a.n. {{ucwords(strtolower('MEIDY KUNCORO ADI'))}}</li>
                 <li>NIK: 3518141xxxxxxxxxx a.n. {{ucwords(strtolower('JUNADI'))}}</li>
                 <li>NIK: 3509205xxxxxxxxxx a.n. {{ucwords(strtolower('aprilia kusuma wardani'))}}</li>
                 <li>NIK: 3506252xxxxxxxxxx a.n. {{ucwords(strtolower('alfian soffa'))}}</li>
