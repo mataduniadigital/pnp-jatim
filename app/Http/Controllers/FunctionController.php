@@ -66,7 +66,7 @@ class FunctionController extends BaseController
 
     public function actionPelamarLogout(Request $request){
         Auth::logout();
-        return Redirect::back();
+        return Redirect::to('/');
     }
 
     public function actionUbahPassword(Request $request){
