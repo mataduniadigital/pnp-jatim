@@ -64,16 +64,16 @@
             <p>Untuk seluruh pelamar dimohon untuk melakukan penggabungan dari semua file berkas persyaratan dalam satu file berekstensi pdf dan melakukan upload berkas tersebut setelah memilih pilihan lokasi penempatan saat masuk ke menu upload berkas.</p>
             <p>Berikut nama-nama pelamar yang harus menambahkan persyaratan upload berkas tambahan:</p>
             <ol>
-                <li>nik: 3573034206790002 a.n. R. YUNITA AMALA</li>
-                <li>nik: 3573022210810005 a.n. Aminuddin Efendy</li>
-                <li>nik: 3309066207959002 a.n. rohmantika wulandari</li>
-                <li>nik: 3509221811800001 a.n. DEDY SAPUTRO</li>
-                <li>nik: 3578041605950010 a.n. MEIDY KUNCORO ADI</li>
-                <li>nik: 3518141308800002 a.n. JUNADI</li>
-                <li>nik: 3509205204950004 a.n. aprilia kusuma wardani</li>
-                <li>nik: 3506252603760002 a.n. alfian soffa</li>
-                <li>nik: 3524041111720002 a.n. Widodo Sutresno</li>
-                <li>nik: 3509201005650002 a.n. Nur Anis Faisal</li>
+                <li>NIK: 3573034xxxxxxxxxx a.n. {{ucwords(strtolower('R. YUNITA AMALA'))}}</li>
+                <li>NIK: 3573022xxxxxxxxxx a.n. {{ucwords(strtolower('Aminuddin Efendy'))}}</li>
+                <li>NIK: 3309066xxxxxxxxxx a.n. {{ucwords(strtolower('rohmantika wulandari'))}}</li>
+                <li>NIK: 3509221xxxxxxxxxx a.n. {{ucwords(strtolower('DEDY SAPUTRO'))}}</li>
+                <li>NIK: 3578041xxxxxxxxxx a.n. {{ucwords(strtolower('MEIDY KUNCORO ADI'))}}</li>
+                <li>NIK: 3518141xxxxxxxxxx a.n. {{ucwords(strtolower('JUNADI'))}}</li>
+                <li>NIK: 3509205xxxxxxxxxx a.n. {{ucwords(strtolower('aprilia kusuma wardani'))}}</li>
+                <li>NIK: 3506252xxxxxxxxxx a.n. {{ucwords(strtolower('alfian soffa'))}}</li>
+                <li>NIK: 3524041xxxxxxxxxx a.n. {{ucwords(strtolower('Widodo Sutresno'))}}</li>
+                <li>NIK: 3509201xxxxxxxxxx a.n. {{ucwords(strtolower('Nur Anis Faisal'))}}</li>
             </ol>
         </div>
     </div>
@@ -84,7 +84,7 @@
             <h2><b>Petunjuk Alur Pendaftaran Peserta</b></h2>
             <ol>
                 <li>Klik Menu Pendaftaran</li>
-                <li>Masukkan NIK, Nama Lengkap (sesuai identitas), dan Password yg diinginkan untuk login akun</li>
+                <li>Masukkan NIK, Nama Lengkap (sesuai identitas), Email, dan Password yg diinginkan untuk login akun</li>
                 <li>Kembali ke Menu Home, lalu login sesuai dengan NIK dan password yang telah didaftarkan</li>
                 <li>Klik tombol "Upload Berkas" untuk melakukan upload berkas sesuai yg dibutuhkan</li>
                 <li>Upload satu per satu berkas sesuai yang ada pada tampilan website</li>
