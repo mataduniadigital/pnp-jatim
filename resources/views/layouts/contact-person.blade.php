@@ -12,7 +12,7 @@
                 <b>Contact Person</b>
             </h2>
             <p>Panitia membuka jalur layanan bantuan melalui telephone (hotline) bagi para pelamar pada hari dan jam kerja Senin-Jumat
-                pukul 09.00-16.00 WIB selama periode pendaftaran pada tanggal 14 Maret s.d 21 Maret 2018. (Panitia tidak
+                pukul 09.00-16.00 WIB selama periode pendaftaran pada tanggal 19 Maret s.d 22 Maret 2018. (Panitia tidak
                 melayani Whatsapp & SMS).</p>
             <ul>
                 <li>Wicky Arya Pradana (0822-4032-8348)</li>

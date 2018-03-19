@@ -70,7 +70,7 @@
                 </span>
                 <span>Download berkas formulir peneriman</span>
             </a>
-            <a href="{{asset('download/pengumuman-rekrutmen-tenaga-pendamping-BSPS-2018.pdf')}}" class="button is-primary">
+            <a href="{{asset('download/pengumuman-rekrutmen-tenaga-pendamping-BSPS-2018-new.pdf')}}" class="button is-primary">
                 <span class="icon is-small">
                     <i class="fa fa-download"></i>
                 </span>
@@ -79,16 +79,15 @@
         </div>
         <div class="content">
             <ol>
-                <li>Seleksi Penerimaan Tenaga Pendamping (KORFAS dan TFL) Kegiatan BSPS Provinsi Jawa Timur Tahun 2018 TIDAK
-                    DIPUNGUT BIAYA.</li>
+                <li>Seleksi Penerimaan Tenaga Pendamping (KORFAS dan TFL) Kegiatan BSPS Provinsi Jawa Timur Tahun 2018 <b>TIDAK DIPUNGUT BIAYA</b></li>
                 <li>Segala biaya/akomodasi/transportasi selama mengikuti proses seleksi ditanggung oleh Pelamar.</li>
                 <li>Panitia membuka jalur layanan bantuan melalui telephone (hotline) bagi para pelamar pada hari dan jam kerja
-                    Senin-Jumat pukul 09.00-16.00 WIB selama periode pendaftaran pada tanggal 14 Maret s.d 21 Maret 2018.
+                    Senin-Jumat pukul 09.00-16.00 WIB selama periode pendaftaran pada tanggal 19 Maret s.d 22 Maret 2018.
                     (Panitia tidak melayani Whatsapp & SMS).
                     <br>
-                    <i>(Untuk detail kontak silakan menuju bagian
-                        <a href="{{url('contact-person')}}">kontak person</a>)</i>
+                    <i>(Untuk detail kontak silakan menuju bagian<a href="{{url('contact-person')}}">kontak person</a>)</i>
                 </li>
+                <li>Berkas lamaran yang diterima panitia menjadi milik panitia dan tidak dapat diminta kembali oleh pelamar.</li>
             </ol>
         </div>
     </div>

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="{{url('/')}}">
-                <b>Pendaftaran PNP Jatim</b>
+                <b>Pendaftaran Tenaga Pendamping BSPS Provinsi Jawa Timur Tahun 2018</b>
             </a>
             <div class="navbar-burger burger" data-target="main-navigation">
                 <span></span>
