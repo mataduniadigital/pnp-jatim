@@ -602,7 +602,7 @@
                                 <br> sesuai dengan jam kerja selama masa kontrak (bermaterai)
                                 <br> dengan format terlampir</label>
                         </div>
-                        @if(empty($berkas_lamaran->file_skck))
+                        @if(empty($berkas_lamaran->file_bukan_pns))
                         <div class="control">
                             <small>
                                 <i style="color: #ff3860">(Wajib diupload)</i>
@@ -692,10 +692,7 @@
                         </div>
                     </div>
                     <input class="input" type="hidden" name="jenis_file">
-                </form>
-                <hr>
-                <form action="{{action('FunctionController@actionPelamarFinishUpload')}}" method="POST" enctype="multipart/form-data">
-                    {{csrf_field()}}
+                    <hr>
                     <div class="content has-text-centered">
                         <h2>Isikan tambahan informasi yang kami perlukan, kemudian klik "Submit All"</h2>
                     </div>
@@ -703,17 +700,30 @@
                         <div class="control">
                             <label class="label">Satukan semua file di atas dalam bentuk pdf kemudian upload sebagai pertimbangan kami</label>
                         </div>
+                        @if(empty($berkas_lamaran->file_summary))
                         <div class="control">
                             <small>
                                 <i style="color: #ff3860">(Wajib diupload)</i>
                             </small>
                         </div>
+                        @else
+                        <div class="control">
+                            <span class="icon is-success is-rounded">
+                                <i class="fa fa-check"></i>
+                            </span>
+                        </div>
+                        <div class="control">
+                            <a href="{{asset($berkas_lamaran->file_summary)}}" target="_blank">
+                                <i>(Lihat upload)</i>
+                            </a>
+                        </div>
+                        @endif
                     </div>
                     <div class="field is-grouped">
                         <div class="control">
                             <div class="file has-name is-fullwidth">
                                 <label class="file-label">
-                                    <input class="file-input" type="file" name="file_summary" required>
+                                    <input class="file-input" type="file" name="file_summary">
                                     <span class="file-cta">
                                         <span class="file-icon">
                                             <i class="fa fa-upload"></i>
@@ -728,7 +738,14 @@
                                 </label>
                             </div>
                         </div>
+                        <div class="control">
+                            <button class="button is-link">Upload</button>
+                        </div>
                     </div>
+                    </form>
+                    <hr>
+                    <form action="{{action('FunctionController@actionPelamarFinishUpload')}}" method="POST">
+                    {{csrf_field()}}
                     <div class="field">
                         <label class="label">Jika Anda belum mengisi email, silakan isi email di sini agar kami dapat menghubungi Anda</label>
                         <div class="control">

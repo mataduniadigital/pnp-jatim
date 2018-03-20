@@ -99,18 +99,71 @@ class FunctionController extends BaseController
                 return 404;
             }
 
-            $path = null;
-            if ($request->hasFile('file_summary')) {
-                $filename = 'p'.$pelamar->id_pelamar.'-'.uniqid().'.'.$request->file('file_summary')->getClientOriginalExtension();
-                $path = $request->file('file_summary')->storeAs('public/file_summary', $filename);
-                $path = str_replace('public', 'storage', $path);
+            if(empty($berkas_lamaran->file_foto)){
+                Session::flash('error-msg', 'Mohon lengkapi berkas Foto Anda .. ');
+                return Redirect::back();
             }
+
+            if(empty($berkas_lamaran->file_ktp)){
+                Session::flash('error-msg', 'Mohon lengkapi berkas KTP Anda .. ');
+                return Redirect::back();
+            }
+
+            if(empty($berkas_lamaran->file_npwp)){
+                Session::flash('error-msg', 'Mohon lengkapi berkas NPWP Anda .. ');
+                return Redirect::back();
+            }
+
+            if(empty($berkas_lamaran->file_keterangan_sehat)){
+                Session::flash('error-msg', 'Mohon lengkapi berkas Surat Keterangan Sehat Anda .. ');
+                return Redirect::back();
+            }
+
+            if(empty($berkas_lamaran->file_surat_lamaran)){
+                Session::flash('error-msg', 'Mohon lengkapi berkas Surat Laraman Anda .. ');
+                return Redirect::back();
+            }
+
+            if(empty($berkas_lamaran->file_cv)){
+                Session::flash('error-msg', 'Mohon lengkapi berkas Daftar Riwayat Hidup Anda .. ');
+                return Redirect::back();
+            }
+            if(empty($berkas_lamaran->file_ijazah)){
+                Session::flash('error-msg', 'Mohon lengkapi berkas Ijazah Anda .. ');
+                return Redirect::back();
+            }
+
+            if(empty($berkas_lamaran->file_transkrip)){
+                Session::flash('error-msg', 'Mohon lengkapi berkas Transkrip Anda .. ');
+                return Redirect::back();
+            }
+            
+            if(empty($berkas_lamaran->file_skck)){
+                Session::flash('error-msg', 'Mohon lengkapi berkas SKCK Anda .. ');
+                return Redirect::back();
+            }
+            
+            if(empty($berkas_lamaran->file_bebas_narkoba)){
+                Session::flash('error-msg', 'Mohon lengkapi berkas Surat keterangan Bebas Narkoba Anda .. ');
+                return Redirect::back();
+                
+            }
+            if(empty($berkas_lamaran->file_bukan_pns)){
+                Session::flash('error-msg', 'Mohon lengkapi berkas Surat Pernyatan pada poin M Anda .. ');
+                return Redirect::back();
+                
+            }
+            if(empty($berkas_lamaran->file_summary)){
+                Session::flash('error-msg', 'Mohon lengkapi berkas yang disatukan dalam bentuk pdf .. ');
+                return Redirect::back();
+
+            }
+
             $pelamar->email                 = $input->email;
             $pelamar->save();
             
             $berkas_lamaran->id_penempatan  = $input->penempatan;
             $berkas_lamaran->status         = 1;
-            $berkas_lamaran->file_summary   = $path;
             $berkas_lamaran->save();
         }
 
@@ -287,6 +340,18 @@ class FunctionController extends BaseController
                     $path = str_replace('public', 'storage', $path);
     
                     $berkas_lamaran->file_bpjs = $path;
+                    $berkas_lamaran->save();
+                    Session::flash('success-msg', 'Berhasil upload berkas ..');
+                }
+            }
+
+            if($request->input('jenis_file') == 'file_summary'){
+                if ($request->hasFile('file_summary')) {
+                    $filename = 'p'.$pelamar->id_pelamar.'-'.uniqid().'.'.$request->file('file_summary')->getClientOriginalExtension();
+                    $path = $request->file('file_summary')->storeAs('public/file_summary', $filename);
+                    $path = str_replace('public', 'storage', $path);
+    
+                    $berkas_lamaran->file_summary = $path;
                     $berkas_lamaran->save();
                     Session::flash('success-msg', 'Berhasil upload berkas ..');
                 }
