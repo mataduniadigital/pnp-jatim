@@ -14,19 +14,19 @@
                     <div class="field">
                         <label class="label">Password lama</label>
                         <div class="control">
-                            <input class="input" type="password" placeholder="password" name="old_password">
+                            <input class="input" type="password" placeholder="password" name="old_password" required>
                         </div>
                     </div>
                     <div class="field">
-                        <label class="label">Password</label>
+                        <label class="label">Password baru</label>
                         <div class="control">
-                            <input class="input" type="password" placeholder="password" name="new_password">
+                            <input class="input" type="password" placeholder="password" name="new_password" required>
                         </div>
                     </div>
                     <div class="field">
-                        <label class="label">Re-type Password</label>
+                        <label class="label">Re-type Password baru</label>
                         <div class="control">
-                            <input class="input" type="password" placeholder="re-type password" name="new_repassword">
+                            <input class="input" type="password" placeholder="re-type password" name="new_repassword" required>
                         </div>
                     </div>
                     <div class="field is-grouped">
