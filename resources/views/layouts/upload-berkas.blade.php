@@ -11,7 +11,7 @@
             <div class="column is-8">
                 @if($berkas_lamaran->status == 0)
                 <div class="content">
-                    <h2>Silakan upload berkas-berkas Anda, berkas dapat berupa <b>file gambar maupun pdf</b></h2>
+                    <h2>Silakan upload berkas-berkas Anda, berkas dapat berupa <b>file gambar maupun pdf dengan Maks. size 25 MB</b></h2>
                 </div>
                 <div class="field">
                     <label class="label">NIK</label>
