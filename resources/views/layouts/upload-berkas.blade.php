@@ -759,7 +759,9 @@
                                 <select name="penempatan" required>
                                     <option value="">Pilih satu lokasi</option>
                                     @foreach($list_penempatan as $penempatan)
+                                    @if($penempatan->id_penempatan == 11 || $penempatan->id_penempatan == 19)
                                     <option value="{{$penempatan->id_penempatan}}">{{$penempatan->nama_penempatan}}</option>
+                                    @endif
                                     @endforeach
                                 </select>
                             </div>
