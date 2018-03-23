@@ -19,6 +19,26 @@ use Yajra\DataTables\Facades\DataTables;
 
 class FunctionController extends BaseController
 {
+    public function actionGenerateNomor(Request $request){
+        $berkas_lamaran_lolos = BerkasLamaran::where('status', 11)->get();
+        $no = 1;
+        foreach($berkas_lamaran_lolos as $berkas){
+            $pelamar = Pelamar::find($berkas->id_pelamar);
+            if($no < 10)
+            $nomor = '180300'.$no;
+            elseif($no < 100)
+            $nomor = '18030'.$no;
+            elseif($no < 1000)
+            $nomor = '1803'.$no;
+
+            $pelamar->nomor_peserta = $nomor;
+            $pelamar->save();
+
+            $no++;
+        }
+        return '';
+    }
+
 	public function actionPelamarDaftar(Request $request){
         $input = (object) $request->input();
 

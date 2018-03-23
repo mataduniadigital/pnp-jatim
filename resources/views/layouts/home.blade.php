@@ -49,14 +49,16 @@
             @if($berkas_lamaran = \App\Models\BerkasLamaran::where('id_pelamar', Auth::user()->id_pelamar)->first())
                 @if($berkas_lamaran->status == 11)
                 <h2><b>SELAMAT! ANDA DINYATAKAN LOLOS SELEKSI ADMINISTRASI</b></h2>
-                <a href="#" class="button is-link">
+                <a href="{{url('kartu-saya')}}" class="button is-link">
                     <span class="icon is-small">
                         <i class="fa fa-download"></i>
                     </span>
                     <span>DOWNLOAD KARTU TANDA PESERTA</span>
                 </a>
+        </div>
+        <div class="content">
                 <dt>
-                    <dl>Lokasi tes tulis berada pada:</dl>
+                    <dl>Lokasi tes tulis dan Wawancara berada pada:</dl>
                     <dl>Tempat : Universitas Maarif Hasyim Latif (UMAHA) Jln. Raya Megare No. 30 Taman, Sidoarjo</dl>
                     <dl>Waktu :	 25 Maret 2018, pukul 08:00 WIB - selesai</dl>
                 </dt>

@@ -22,6 +22,7 @@ class Pelamar extends Authenticatable
     protected $fillable = [
         'nama_lengkap',
         'nik',
+        'nomor_peserta',
         'email',
         'password'
     ];
