@@ -57,7 +57,7 @@ class FunctionController extends BaseController
         $nik = str_replace( array( '\'', '"', ',' , ';', '<', '>', '@', '-', '.'), '', $nik);
 
         if(Auth::attempt(['nik' => $nik, 'password' => $input->password], true)){
-            Session::flash('success-msg', 'Selamat datang ...');
+            // Session::flash('success-msg', 'Selamat datang ...');
             return Redirect::back();
         }else{
             Session::flash('error-msg', 'Login failed ...');

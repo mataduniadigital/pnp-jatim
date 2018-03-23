@@ -46,87 +46,83 @@
             <h2>
                 <b>Hai, Saudara/i {{Auth::user()->nama_lengkap}}</b>
             </h2>
-            <p>Untuk mengupload berkas Anda bisa klik link berikut atau klik tombol upload berkas di bagian navigasi</p>
-            <a href="{{url('upload-berkas')}}" class="button is-primary">
-                <span class="icon is-small">
-                    <i class="fa fa-upload"></i>
-                </span>
-                <span>Upload Berkas</span>
-            </a>
+            @if($berkas_lamaran = \App\Models\BerkasLamaran::where('id_pelamar', Auth::user()->id_pelamar)->first())
+                @if($berkas_lamaran->status == 11)
+                <h2><b>SELAMAT! ANDA DINYATAKAN LOLOS SELEKSI ADMINISTRASI</b></h2>
+                <a href="#" class="button is-link">
+                    <span class="icon is-small">
+                        <i class="fa fa-download"></i>
+                    </span>
+                    <span>DOWNLOAD KARTU TANDA PESERTA</span>
+                </a>
+                <dt>
+                    <dl>Lokasi tes tulis berada pada:</dl>
+                    <dl>Tempat : Universitas Maarif Hasyim Latif (UMAHA) Jln. Raya Megare No. 30 Taman, Sidoarjo</dl>
+                    <dl>Waktu :	 25 Maret 2018, pukul 08:00 WIB - selesai</dl>
+                </dt>
+                @else
+                <h2><b>MAAF, ANDA DINYATAKAN TIDAK LOLOS SELEKSI ADMINISTRASI</b></h2>
+                @endif
+            @endif
         </div>
     </div>
 </section>
 @endif
 <section class="section">
     <div class="container">
-        <div class="content">
-            <h2><b>Pengumuman Upload Berkas Tambahan</b></h2>
-            <p>Untuk seluruh pelamar dimohon untuk melakukan penggabungan dari semua file berkas persyaratan dalam satu file berekstensi pdf dan melakukan upload berkas tersebut setelah memilih pilihan lokasi penempatan saat masuk ke menu upload berkas.</p>
-            <p>Berikut nama-nama pelamar yang harus menambahkan persyaratan upload berkas tambahan:</p>
-            <ol>
-                <li>NIK: 3573034xxxxxxxxxx a.n. {{ucwords(strtolower('R. YUNITA AMALA'))}}</li>
-                <li>NIK: 3573022xxxxxxxxxx a.n. {{ucwords(strtolower('Aminuddin Efendy'))}}</li>
-                <li>NIK: 3509221xxxxxxxxxx a.n. {{ucwords(strtolower('DEDY SAPUTRO'))}}</li>
-                <li>NIK: 3518141xxxxxxxxxx a.n. {{ucwords(strtolower('JUNADI'))}}</li>
-                <li>NIK: 3509205xxxxxxxxxx a.n. {{ucwords(strtolower('aprilia kusuma wardani'))}}</li>
-                <li>NIK: 3506252xxxxxxxxxx a.n. {{ucwords(strtolower('alfian soffa'))}}</li>
-                <li>NIK: 3524041xxxxxxxxxx a.n. {{ucwords(strtolower('Widodo Sutresno'))}}</li>
-                <li>NIK: 3509201xxxxxxxxxx a.n. {{ucwords(strtolower('Nur Anis Faisal'))}}</li>
-            </ol>
-        </div>
-    </div>
-</section>
-<section class="section">
-    <div class="container">
-        <div class="content">
-            <h2><b>Petunjuk Alur Pendaftaran Peserta</b></h2>
-            <ol>
-                <li>Klik Menu Pendaftaran</li>
-                <li>Masukkan NIK, Nama Lengkap (sesuai identitas), Email, dan Password yg diinginkan untuk login akun</li>
-                <li>Kembali ke Menu Home, lalu login sesuai dengan NIK dan password yang telah didaftarkan</li>
-                <li>Klik tombol "Upload Berkas" untuk melakukan upload berkas sesuai yg dibutuhkan</li>
-                <li>Upload satu per satu berkas sesuai yang ada pada tampilan website</li>
-                <li>Pilih lokasi (kabupaten/kota) yang dikendaki untuk lokasi penempatan </li>
-                <li>Lakukan persetujuan dengan klik centang pada 2 poin terakhir</li>
-                <li>Klik tombol "Submit All"</li>
-                <li>Setelah Anda dipastikan lolos seleksi berkas oleh Tim Verifikator, lakukan login kembali dan cetak Kartu Tanda Pendaftaran </li>
-                <li>Kartu Tanda Pendaftaran digunakan sebagai tanda ketika melakukan Tes Tulis dan Wawancara</li>
-            </ol>
-        </div>
-    </div>
-</section>
-<section class="section">
-    <div class="container">
-        <div class="content">
+        <div class="content has-text-centered">
             <h2>
-                <b>Pengumuman</b>
+                <b>PENETAPAN NAMA-NAMA PESERTA YANG LOLOS SELEKSI ADMINISTRASI<br>
+                CALON TENAGA PENDAMPING KEGIATAN<br>
+                BANTUAN STIMULAN PERUMAHAN SWADAYA (BSPS)<br>
+                PROVINSI JAWA TIMUR TAHUN 2018<br>
+                </b>
             </h2>
-            <p>Silakan mendownload berkas-berkas penting berikut</p>
-            <a href="{{asset('download/Daftar-formulir-penerimaan-BSPS-2018.zip')}}" class="button is-link">
+            <a href="{{asset('download/penetapan-2018.pdf')}}" class="button is-link">
                 <span class="icon is-small">
                     <i class="fa fa-download"></i>
                 </span>
-                <span>Download berkas formulir peneriman</span>
-            </a>
-            <a href="{{asset('download/pengumuman-rekrutmen-tenaga-pendamping-BSPS-2018-new.pdf')}}" class="button is-primary">
-                <span class="icon is-small">
-                    <i class="fa fa-download"></i>
-                </span>
-                <span>Download pengumuman BSPS 2018</span>
+                <span>Download daftar pelamar yang lolos di sini</span>
             </a>
         </div>
         <div class="content">
-            <ol>
-                <li>Seleksi Penerimaan Tenaga Pendamping (KORFAS dan TFL) Kegiatan BSPS Provinsi Jawa Timur Tahun 2018 <b>TIDAK DIPUNGUT BIAYA</b></li>
-                <li>Segala biaya/akomodasi/transportasi selama mengikuti proses seleksi ditanggung oleh Pelamar.</li>
-                <li>Panitia membuka jalur layanan bantuan melalui telephone (hotline) bagi para pelamar pada hari dan jam kerja
-                    Senin-Jumat pukul 09.00-16.00 WIB selama periode pendaftaran pada tanggal 19 Maret s.d 22 Maret 2018.
-                    (Panitia tidak melayani Whatsapp & SMS).
-                    <br>
-                    <i>(Untuk detail kontak silakan menuju bagian <a href="{{url('contact-person')}}">kontak person</a>)</i>
+            <p>Adapun peserta yang dinyatakan lolos seleksi administrasi , diharapkan:</p>
+            <ol type="a">
+                <li>Login dengan memasukkan NIK dan password</li>
+                <li>Kartu Tanda Peserta hanya dapat dicetak apabila peserta telah login dan dinyatakan lolos seleksi administrasi</li>
+                <li>Membawa kelengkapan alat tulis berupa pensil 2B, bolpoin, dan penghapus</li>
+                <li>Membawa berkas lamaran, tanda pengenal asli (KTP, SIM atau paspor), dan Kartu Tanda Peserta</li>
+                <li>Berkas lamaran yang dibawa:
+                    <ol type="A">
+                        <li>Surat lamaran (asli)</li>
+                        <li>Daftar Riwayat Hidup (asli)</li>
+                        <li>Pas foto 4x6 = 1 lembar</li>
+                        <li>Fotocopy KTP</li>
+                        <li>Fotocopy NPWP</li>
+                        <li>Surat keterangan sehat jasmani dan rohani (asli)</li>
+                        <li>Fotocopy ijazah terakhir (legalisir)</li>
+                        <li>Fotocopy transkrip (legalisir)</li>
+                        <li>Fotocopy SKCK yang masih berlaku (legalisir)</li>
+                        <li>Surat bebas narkoba, psikotropika, dan zat aditif lainnya (asli)</li>
+                        <li>Surat keterangan pengalaman kerja sejenis (jika ada)</li>
+                        <li>Sertifikat kursus/pelatihan keahlian terkait (jika ada)</li>
+                        <li>Surat pernyataan bukan PNS, pengurus LSM, bukan anggota dan simpatisan partai politik sertaq bukan tim sukses dari calon kepala desa, calon pasangan kepala daerah, dan calon pasangan Presiden Republik Indonesia bermaterai (asli)</li>
+                        <li>Surat pernyataan bersedia bekerja penuh waktu (Full Time) sesuai dengan jam kerja selama masa kontrak bermaterai (asli)</li>
+                        <li>Surat BPJS (jika ada)</li>
+                    </ol>
                 </li>
-                <li>Berkas lamaran yang diterima panitia menjadi milik panitia dan tidak dapat diminta kembali oleh pelamar.</li>
+                <li>Jadwal tes tulis dan wawancara ditetapkan pada tanggal 25 Maret 2018 dengan rincian jadwal dan tempat yang dapat diakses setelah login</li>
+                <li>Peserta diharapkan dating satu jam sebelum tes tulis dan wawancara dilaksanakan</li>
+                <li>Peserta yang mengikuti tes tulis dan wawancara diwajibkan menggunakan pakaian bebas rapi (bukan bahan kaos) dan bersepatu.</li>
             </ol>
+        </div>
+        <div class="content">
+        <p><b>KETERANGAN :</b></p>
+        <ol>
+            <li>Keputusan dan penentuan hasil seleksi sepenuhnya merupakan kewenangan pejabat pengadaan Barang/jasa pada SNVT Penyediaan Perumahan Provinsi Jawa Timur yang bersifat final dan tidak bias diganggu gugat</li>
+            <li>Biaya akomodasi dan transportasi ditanggung oleh masing-masing peserta yang dinyatakan lolos seleksi administrasi</li>
+            <li>Peserta tidka dipungut biaya apapun dalam proses seleksi Tenaga Pendamping Kegiatan Bantuan Stimulan Perumaha Swadaya (BSPS) Provinsi Jawa Timur</li>
+        </ol>
         </div>
     </div>
 </section>

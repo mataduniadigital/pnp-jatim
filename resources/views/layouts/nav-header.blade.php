@@ -16,9 +16,6 @@
                 <a class="navbar-item" href="{{url('/')}}">
                     Home
                 </a>
-                <a class="navbar-item" href="{{url('daftar')}}">
-                    Pendaftaran
-                </a>
                 <a class="navbar-item" href="{{url('pengumuman-berkas')}}">
                     Pengumuman Berkas
                 </a>
@@ -61,14 +58,6 @@
     <div class="hero-foot">
         <div class="container">
             <div class="field is-grouped is-grouped-multiline is-grouped-right">
-                <p class="control">
-                    <a class="button is-primary" href="{{url('upload-berkas')}}">
-                        <span class="icon">
-                            <i class="fa fa-upload"></i>
-                        </span>
-                        <span>Upload Berkas</span>
-                    </a>
-                </p>
                 <p class="control">
                     <a class="button is-black" href="{{url('ubah-password')}}">
                         <span class="icon">
