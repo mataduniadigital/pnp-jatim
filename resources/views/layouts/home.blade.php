@@ -80,7 +80,7 @@
                 PROVINSI JAWA TIMUR TAHUN 2018<br>
                 </b>
             </h2>
-            <a href="{{asset('download/penetapan-2018.pdf')}}" class="button is-link">
+            <a href="{{asset('download/penetapan-2018-1.pdf')}}" class="button is-link">
                 <span class="icon is-small">
                     <i class="fa fa-download"></i>
                 </span>
