@@ -72,6 +72,11 @@
 @endif
 <section class="section">
     <div class="container">
+        <div class="content">
+            <p>Disampaikan Kepada Seluruh Pelamar Calon Tenaga Pendamping BSPS Provinsi Jawa Timur Tahun 2018, Pengumuman Hasil Seleksi Penerimaan Calon Tenaga Pendamping masih dalam proses evaluasi dan DIUNDUR pada hari SENIN tanggal 02 April 2018</p>
+            <br>
+            <p>Demikian disampaikan terimakasih.</p>
+        </div>
         <div class="content has-text-centered">
             <h2>
                 <b>PENETAPAN NAMA-NAMA PESERTA YANG LOLOS SELEKSI ADMINISTRASI<br>
