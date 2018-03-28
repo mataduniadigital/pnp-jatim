@@ -72,64 +72,15 @@
 @endif
 <section class="section">
     <div class="container">
+        <div class="content has-text-centered">
+            <h2>
+                <b>PENGUMUMAN</b>
+            </h2>
+        </div>
         <div class="content">
             <p>Disampaikan Kepada Seluruh Pelamar Calon Tenaga Pendamping BSPS Provinsi Jawa Timur Tahun 2018, Pengumuman Hasil Seleksi Penerimaan Calon Tenaga Pendamping masih dalam proses evaluasi dan DIUNDUR pada hari SENIN tanggal 02 April 2018</p>
             <br>
             <p>Demikian disampaikan terimakasih.</p>
-        </div>
-        <div class="content has-text-centered">
-            <h2>
-                <b>PENETAPAN NAMA-NAMA PESERTA YANG LOLOS SELEKSI ADMINISTRASI<br>
-                CALON TENAGA PENDAMPING KEGIATAN<br>
-                BANTUAN STIMULAN PERUMAHAN SWADAYA (BSPS)<br>
-                PROVINSI JAWA TIMUR TAHUN 2018<br>
-                </b>
-            </h2>
-            <a href="{{asset('download/penetapan-2018-1.pdf')}}" class="button is-link">
-                <span class="icon is-small">
-                    <i class="fa fa-download"></i>
-                </span>
-                <span>Download daftar pelamar yang lolos di sini</span>
-            </a>
-        </div>
-        <div class="content">
-            <p>Adapun peserta yang dinyatakan lolos seleksi administrasi , diharapkan:</p>
-            <ol type="a">
-                <li>Login dengan memasukkan NIK dan password</li>
-                <li>Kartu Tanda Peserta hanya dapat dicetak apabila peserta telah login dan dinyatakan lolos seleksi administrasi</li>
-                <li>Membawa kelengkapan alat tulis berupa pensil 2B, bolpoin, dan penghapus</li>
-                <li>Membawa berkas lamaran, tanda pengenal asli (KTP, SIM atau paspor), dan Kartu Tanda Peserta</li>
-                <li>Berkas lamaran yang dibawa:
-                    <ol type="A">
-                        <li>Surat lamaran (asli)</li>
-                        <li>Daftar Riwayat Hidup (asli)</li>
-                        <li>Pas foto 4x6 = 1 lembar</li>
-                        <li>Fotocopy KTP</li>
-                        <li>Fotocopy NPWP</li>
-                        <li>Surat keterangan sehat jasmani dan rohani (asli)</li>
-                        <li>Fotocopy ijazah terakhir (legalisir)</li>
-                        <li>Fotocopy transkrip (legalisir)</li>
-                        <li>Fotocopy SKCK yang masih berlaku (legalisir)</li>
-                        <li>Surat bebas narkoba, psikotropika, dan zat aditif lainnya (asli)</li>
-                        <li>Surat keterangan pengalaman kerja sejenis (jika ada)</li>
-                        <li>Sertifikat kursus/pelatihan keahlian terkait (jika ada)</li>
-                        <li>Surat pernyataan bukan PNS, pengurus LSM, bukan anggota dan simpatisan partai politik sertaq bukan tim sukses dari calon kepala desa, calon pasangan kepala daerah, dan calon pasangan Presiden Republik Indonesia bermaterai (asli)</li>
-                        <li>Surat pernyataan bersedia bekerja penuh waktu (Full Time) sesuai dengan jam kerja selama masa kontrak bermaterai (asli)</li>
-                        <li>Surat BPJS (jika ada)</li>
-                    </ol>
-                </li>
-                <li>Jadwal tes tulis dan wawancara ditetapkan pada tanggal 25 Maret 2018 dengan rincian jadwal dan tempat yang dapat diakses setelah login</li>
-                <li>Peserta diharapkan dating satu jam sebelum tes tulis dan wawancara dilaksanakan</li>
-                <li>Peserta yang mengikuti tes tulis dan wawancara diwajibkan menggunakan pakaian bebas rapi (bukan bahan kaos) dan bersepatu.</li>
-            </ol>
-        </div>
-        <div class="content">
-        <p><b>KETERANGAN :</b></p>
-        <ol>
-            <li>Keputusan dan penentuan hasil seleksi sepenuhnya merupakan kewenangan pejabat pengadaan Barang/jasa pada SNVT Penyediaan Perumahan Provinsi Jawa Timur yang bersifat final dan tidak bias diganggu gugat</li>
-            <li>Biaya akomodasi dan transportasi ditanggung oleh masing-masing peserta yang dinyatakan lolos seleksi administrasi</li>
-            <li>Peserta tidka dipungut biaya apapun dalam proses seleksi Tenaga Pendamping Kegiatan Bantuan Stimulan Perumaha Swadaya (BSPS) Provinsi Jawa Timur</li>
-        </ol>
         </div>
     </div>
 </section>
