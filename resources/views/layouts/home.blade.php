@@ -78,7 +78,7 @@
                     <div class="control">
                         <label class="checkbox">
                             <input type="checkbox" required>
-                            Saya bersedia menjadi {{$pelamar_lolos->jabatan_lamaran->nama}} dan ditempatkan di {{$pelamar_lolos->penempatan->nama_penempatan}}
+                            Dengan ini saya menyatakan bersedia menjadi {{$pelamar_lolos->jabatan_lamaran->nama}} dan ditempatkan di {{$pelamar_lolos->penempatan->nama_penempatan}}
                         </label>
                     </div>
                 </div>
