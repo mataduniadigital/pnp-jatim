@@ -97,7 +97,7 @@
             <h2>
                 <b>Hai, Saudara/i {{Auth::user()->nama_lengkap}}</b>
             </h2>
-                <h2><b>MAAF, ANDA DINYATAKAN TIDAK LOLOS SELEKSI ADMINISTRASI</b></h2>
+                <h2><b>MAAF, ANDA DINYATAKAN TIDAK LOLOS SELEKSI</b></h2>
         </div>
         @endif
     </div>
