@@ -39,37 +39,6 @@
         </div>
     </div>
 </section>
-@else
-<section class="section">
-    <div class="container">
-        <div class="content">
-            <h2>
-                <b>Hai, Saudara/i {{Auth::user()->nama_lengkap}}</b>
-            </h2>
-            @if($berkas_lamaran = \App\Models\BerkasLamaran::where('id_pelamar', Auth::user()->id_pelamar)->first())
-                @if($berkas_lamaran->status == 11)
-                <h2><b>SELAMAT! ANDA DINYATAKAN LOLOS SELEKSI ADMINISTRASI</b></h2>
-                <a href="{{url('kartu-saya')}}" class="button is-link">
-                    <span class="icon is-small">
-                        <i class="fa fa-download"></i>
-                    </span>
-                    <span>DOWNLOAD KARTU TANDA PESERTA</span>
-                </a>
-        </div>
-        <div class="content">
-                <dt>
-                    <dl>Lokasi tes tulis dan Wawancara berada pada:</dl>
-                    <dl>Tempat : Universitas Maarif Hasyim Latif (UMAHA) Jln. Raya Megare No. 30 Taman, Sidoarjo</dl>
-                    <dl>Waktu :	 25 Maret 2018, pukul 08:00 WIB - selesai</dl>
-                </dt>
-                @else
-                <h2><b>MAAF, ANDA DINYATAKAN TIDAK LOLOS SELEKSI ADMINISTRASI</b></h2>
-                @endif
-            @endif
-        </div>
-    </div>
-</section>
-@endif
 <section class="section">
     <div class="container">
         <div class="content has-text-centered">
@@ -78,12 +47,62 @@
             </h2>
         </div>
         <div class="content">
-            <p>Disampaikan Kepada Seluruh Pelamar Calon Tenaga Pendamping BSPS Provinsi Jawa Timur Tahun 2018, Pengumuman Hasil Seleksi Penerimaan Calon Tenaga Pendamping masih dalam proses evaluasi dan DIUNDUR pada hari SENIN tanggal 02 April 2018</p>
+            <p>Disampaikan Kepada Seluruh Pelamar Calon Tenaga Pendamping BSPS Provinsi Jawa Timur Tahun 2018, silakan login untuk melihat Pengumuman Hasil Seleksi</p>
             <br>
             <p>Demikian disampaikan terimakasih.</p>
         </div>
     </div>
 </section>
+@else
+<section class="section">
+    <div class="container">
+        @if($pelamar_lolos = \App\Models\PelamarLolos::where('id_pelamar', Auth::user()->id_pelamar)->first())
+        <div class="content">
+            <h2>
+                <b>Hai, Saudara/i {{Auth::user()->nama_lengkap}}</b>
+            </h2>
+            <h2><b>SELAMAT! ANDA DINYATAKAN LOLOS SELEKSI</b></h2>
+            <p>Untuk daftar seluruh peserta yang lolos bisa di download di bawah</p>
+            <a href="{{url('download/applicant-lolos-seleksi.pdf')}}" class="button is-link">
+                <span class="icon is-small">
+                    <i class="fa fa-download"></i>
+                </span>
+                <span>DOWNLOAD DAFTAR PESERTA LOLOS</span>
+            </a>
+        </div>
+        @if($pelamar_lolos->status == 0)
+        <div class="content" style="border: 1px solid #000; padding: 1.5rem;">
+            <form action="{{action('FunctionController@actionAgreeWithResult')}}" method="POST">
+                {{csrf_field()}}
+                <div class="field is-grouped is-grouped-centered">
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" required>
+                            Saya bersedia menjadi {{$pelamar_lolos->jabatan_lamaran->nama}} dan ditempatkan di {{$pelamar_lolos->penempatan->nama_penempatan}}
+                        </label>
+                    </div>
+                </div>
+                <div class="field is-grouped is-grouped-centered">
+                    <div class="control">
+                        <button class="button is-primary">Ya, saya setuju</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        @else
+        <p><b>Anda sudah menyetujui untuk menjadi {{$pelamar_lolos->jabatan_lamaran->nama}} dan ditempatkan di {{$pelamar_lolos->penempatan->nama_penempatan}}</b></p>
+        @endif
+        @else
+        <div class="content">
+            <h2>
+                <b>Hai, Saudara/i {{Auth::user()->nama_lengkap}}</b>
+            </h2>
+                <h2><b>MAAF, ANDA DINYATAKAN TIDAK LOLOS SELEKSI ADMINISTRASI</b></h2>
+        </div>
+        @endif
+    </div>
+</section>
+@endif
 @endsection 
 
 @push('scripts')

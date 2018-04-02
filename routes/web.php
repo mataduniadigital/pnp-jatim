@@ -23,6 +23,7 @@
     Route::group(['middleware' => ['auth']], function () {
         Route::get('signout', ['uses' => 'FunctionController@actionPelamarLogout']);
         Route::get('kartu-saya', ['uses' => 'LayoutController@indexKartuSaya']);
+        Route::post('saya-setuju', ['uses' => 'FunctionController@actionAgreeWithResult']);
         // Route::post('upload-berkas', ['uses' => 'FunctionController@actionPelamarUploadBerkas']);
         // Route::post('finish-upload', ['uses' => 'FunctionController@actionPelamarFinishUpload']);
         Route::get('ubah-password', ['uses' => 'LayoutController@indexUbahPassword']);

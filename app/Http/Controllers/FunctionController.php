@@ -13,12 +13,29 @@ use Excel;
 use Session;
 
 use App\Models\Pelamar;
+use App\Models\PelamarLolos;
 use App\Models\BerkasLamaran;
 
 use Yajra\DataTables\Facades\DataTables;
 
 class FunctionController extends BaseController
 {
+    public function actionAgreeWithResult(Request $request){
+        $pelamar = Auth::user();
+        if($pelamar_lolos = PelamarLolos::where('id_pelamar', $pelamar->id_pelamar)->first()){
+            if($pelamar_lolos->status == 0){
+                $pelamar_lolos->status = 1;
+                $pelamar_lolos->save();
+
+                Session::flash('success-msg', 'Anda sudah menyetujui keputusan.');
+                return Redirect::back();
+            }
+        }else{
+            return Redirect::back();
+        }
+
+    }
+
     public function actionGenerateNomor(Request $request){
         $berkas_lamaran_lolos = BerkasLamaran::where('status', 11)->get();
         $no = 1;
