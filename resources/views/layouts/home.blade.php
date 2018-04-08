@@ -63,7 +63,7 @@
             </h2>
             <h2><b>SELAMAT! ANDA DINYATAKAN LOLOS SELEKSI</b></h2>
             <p>Untuk daftar seluruh peserta yang lolos bisa di download di bawah</p>
-            <a href="{{url('download/applicant-lolos-seleksi.pdf')}}" class="button is-link">
+            <a href="{{url('download/applicant-lolos-seleksi-rev.pdf')}}" class="button is-link">
                 <span class="icon is-small">
                     <i class="fa fa-download"></i>
                 </span>
